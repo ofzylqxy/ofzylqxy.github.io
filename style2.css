@@ -1,0 +1,28 @@
+.tips {
+    text-align: center;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    top: 75%;
+    left: 50%;
+    color: black;
+    width: 100%;
+}
+
+.tips p{
+    margin: 0;
+}
+
+.typed-text{
+    margin: 10px 50px; 
+    letter-spacing: 6px; 
+    font-weight: 300;
+    color: black;
+    font-style: italic;
+    position: fixed;
+}
+
+
+#canvas {
+	position: fixed;
+	display: block;
+}
