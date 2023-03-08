@@ -1,148 +1,72 @@
+html {
+    font-size: 16px
+}
 
 
 body {
-  background-color: #F0E2DB;
-  font-family: "Helvetica Neue", "Segoe UI", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;;
-  /* background-color: #F6EAEB; */
-  transition: 1s;
-  font-size: 16px;
-  user-select: none;
-  -webkit-user-select: none;
+    background-color: #F0E2DB;
+    font-family: "Helvetica Neue", "Segoe UI", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;;
+    transition: 1s;
+    user-select: none;
+    -webkit-user-select: none;
 }
 
-body.open{
-  animation: bg-change 1s 1;
-  -webkit-animation: bg-change 1s 1;
-  background-color: #FADBDD;
-  /* background-color: #F0E2DB; */
-  transition: 1s;
+body.open {
+    animation: bg-change 1s 1;
+    -webkit-animation: bg-change 1s 1;
+    background-color: #FADBDD;
+    transition: 1s;
 }
-@keyframes bg-change{
-  0%{
-      background-color: #F0E2DB;
-  }
-  100%{
-      background-color: #FADBDD;
-  }
+
+@keyframes bg-change {
+    0% {
+        background-color: #F0E2DB;
+    }
+    100% {
+        background-color: #FADBDD;
+    }
 }
-@-webkit-keyframes bg-change{
-  0%{
-      background-color: #F0E2DB;
-  }
-  100%{
-      background-color: #FADBDD;
-  }
+
+@-webkit-keyframes bg-change {
+    0% {
+        background-color: #F0E2DB;
+    }
+    100% {
+        background-color: #FADBDD;
+    }
 }
-.gift {
-  z-index: 100;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100px;
-  height: 100px;
-  transform-origin: 0% 0%;
-  cursor: pointer;
-  transform: translate(-50%, -50%);
-  transition: 1s;
-/*   animation: dukdik 0.5s infinite; */
+
+
+.target-date {
+    font-size: 3rem;
+    margin: 1rem;
+    /*color: #c3c3c3;*/
+    font-style: italic;
+    text-align: center;
+    font-weight: bold;
 }
-.dukdik{
-  transform-origin: 0% 0%;
-  cursor: pointer;
-  animation: dukdik 0.5s infinite;
-}
-@keyframes dukdik {
-  0% {
-    transform: rotate(0deg) translate(-50%, -50%);
-  }
-  25%{
-    transform: rotate(1deg) translate(-50%, -50%);
-  }
-  50%{
-    transform: rotate(0deg) translate(-50%, -50%);
-  }
-  70%{
-    transform: rotate(-1deg) translate(-50%, -50%);
-  }
-  100%{
-    transform: rotate(0deg) translate(-50%, -50%);
-  }
-}
-.gift-top {
-  position: relative;
-  width: 110%;
-  height: 25%;
-  background: #F54537;
-  border-radius: 5px 5px 0 0;
-  transform: translate3d(-5%, 0, 0);
-  background-image: linear-gradient(to right, #F54537 0%, #F54537 44%, #FFC113 44%, #FFC113 56%, #F54537 56%, #F54537 100%);
-  transition: 1s;
-}
-.gift-top.boxOpen{
-  animation: box-open 1s;
-  opacity:0;
-}
-@keyframes box-open{
-  0%{
-    top:0px;
-    opacity:1;
-  }
-  100%{
-    top:-50px;
-    opacity:0;
-  }
-}
-.gift-top::before,
-.gift-top::after {
-    content: "";
-    width: 15px;
-    height: 15px;
-    border: 10px solid #FFC113;
-    border-radius: 50% 50% 0 50%;
-    position: absolute;
-    top: 0;
+.tips {
+    text-align: center;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    top: 75%;
     left: 50%;
-    transform: translate3d(-100%, -100%, 0) skew(10deg, 10deg);
+    color: black;
+    width: 100%;
 }
 
-.gift-top::after {
-  border-radius: 50% 50% 50% 0;
-  transform: translate3d(0, -100%, 0) skew(-10deg, -10deg);
+.typed-text {
+    margin: 10px 50px;
+    letter-spacing: 0.4rem;
+    font-weight: 300;
+    color: black;
+    font-style: italic;
+    position: fixed;
+    font-size: 1.5rem;
 }
 
-.gift-text {
-  position: absolute;
-  left: 50%;
-  margin: 0;
-  font-size: 3rem;
-  color: #ffffff;
-  white-space: nowrap;
-  transform: translate3d(-50%, -50%, 0) scale(.5);
-  transform-origin: center center;
-  z-index: -1;
-  opacity:1;
-  transition: 5s;
-}
 
-.gift-box {
-  width: 100%;
-  height: 75%;
-  position:relative;
-  background-image: linear-gradient(to right, #D43130 0%, #D43130 45%, #FF900A 45%, #FF900A 55%, #D43130 55%, #D43130 100%);
-  border-radius: 0 0 5px 5px;
-  transition: 1s;
-}
-.gift-box.boxDown{
-  animation: box-down 1s; 
-  opacity:0; 
-}
-@keyframes box-down{
-  0%{
-    top:0px;
-    opacity:1;
-  }
-  100%{
-    top:50px;
-    opacity:0;
-  }  
+#canvas {
+    position: fixed;
+    display: block;
 }
