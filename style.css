@@ -2,6 +2,10 @@ html {
     font-size: 16px
 }
 
+[v-cloak]{
+    display: none;
+}
+
 
 body {
     background-color: #F0E2DB;
@@ -57,7 +61,7 @@ body.open {
 
 .typed-text {
     margin: 10px 50px;
-    letter-spacing: 0.4rem;
+    letter-spacing: 1rem;
     font-weight: 300;
     color: black;
     font-style: italic;

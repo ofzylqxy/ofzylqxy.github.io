@@ -19,7 +19,7 @@
             <div class="gift-box" :class="{boxDown: open}">
             </div>
         </div>
-        <div class="tips">
+        <div class="tips" v-cloak>
             <span style="font-weight: 300;font-size: 2rem;">距离</span>
             <p class="target-date">{{targetDayText}}</p>
             <span style="font-weight: 300;font-size: 2rem;">已经过去了{{days}}{{hours}}{{minutes}}{{seconds}}</span>
