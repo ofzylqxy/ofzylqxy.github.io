@@ -2,7 +2,8 @@ var aText = [
     "在这里写",
     "你想写的话",
     "超过二十行后",
-    "就会覆盖"
+    "就会覆盖",
+    "之前写过的话"
 ];
 
 
@@ -13,18 +14,18 @@ var app = new Vue({
     el: '#app',
     data: {
         open: false,
-        text: 'Happy Anniversary 1 Year~',
+        text: 'Happy 1 Year Anniversary~',
         targetDayText: targetDay,
         textTyper: {
-            iSpeed: 100, // time delay of print out
-            iIndex: 0, // start printing array at this posision
-            iArrLength: aText[0].length, // the length of the first text of array
-            iScrollAt: 20, // start scrolling up at this many lines
-            iTextPos: 0, // initialise text position
-            sContents: '', // initialise contents variable
-            iRow: null // initialise current row
+            iSpeed: 100, // 每个字打印的速度，单位毫秒
+            iIndex: 0, // 开始打印的行index
+            iArrLength: aText[0].length, // 第一句话的长度
+            iScrollAt: 20, // 最大行数，超过后会从头开始覆盖
+            iTextPos: 0, // 当前行打印的index
+            sContents: '', // 显示的字
+            iRow: null // 当前打印的行的index，相对于iScrollAt
         },
-        curtext: '',
+        curText: '',
         days: '',
         hours: '',
         minutes: '',
@@ -36,6 +37,7 @@ var app = new Vue({
     },
     methods: {
         click: function () {
+            // TODO 到时间了才能打开
             this.open = !this.open;
         },
         countdown: function () {
@@ -55,7 +57,7 @@ var app = new Vue({
             while (this.textTyper.iRow < this.textTyper.iIndex) {
                 this.textTyper.sContents += aText[this.textTyper.iRow++] + '<br />';
             }
-            this.curtext = this.textTyper.sContents + aText[this.textTyper.iIndex].substring(0, this.textTyper.iTextPos) + "_";
+            this.curText = this.textTyper.sContents + aText[this.textTyper.iIndex].substring(0, this.textTyper.iTextPos) + "_";
             if (this.textTyper.iTextPos++ === this.textTyper.iArrLength) {
                 this.textTyper.iTextPos = 0;
                 this.textTyper.iIndex++;
@@ -69,6 +71,7 @@ var app = new Vue({
         }
     },
     watch: {
+        // 监听open的状态
         open: function () {
             if (this.open === true) {
                 document.body.className = 'open';
