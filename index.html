@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>oftcsll</title>
+    <title>For Lily</title>
     <link rel="stylesheet" href="giftbox.css">
     <link rel="stylesheet" href="confetti.css">
     <link rel="stylesheet" href="style.css">
@@ -12,12 +12,10 @@
 
 <body>
     <div id="app">
-        <div class="gift" :class="{dukdik: !open}" @click="click">
-            <div class="gift-top" :class="{boxOpen: open}">
-            </div>
-            <span class="gift-text" v-show="open">{{text}}</span>
-            <div class="gift-box" :class="{boxDown: open}">
-            </div>
+        <div id="gift-id" class="gift" :class="{dukdik: !open}">
+            <div class="gift-top" :class="{boxOpen: open}" @click="click"></div>
+            <span id="cheer-text" @click="textClick" class="gift-text" v-show="open">{{text}}</span>
+            <div class="gift-box" :class="{boxDown: open}" @click="click"></div>
         </div>
         <div class="tips" v-cloak>
             <span style="font-weight: 300;font-size: 2rem;">距离</span>
@@ -181,7 +179,7 @@
     </div>
     <script src='./vue.min.js'></script>
     <script src="./script.js"></script>
-    <script src="fileworks.js"></script>
+    <script src="fireworks.js"></script>
 </body>
 
 </html>

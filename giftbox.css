@@ -6,7 +6,6 @@
   width: 200px;
   height: 200px;
   transform-origin: 0 0;
-  cursor: pointer;
   transform: translate(-50%, -50%);
   transition: 1s;
 /*   animation: dukdik 0.5s infinite; */
@@ -22,7 +21,7 @@
   white-space: nowrap;
   transform: translate3d(-50%, -50%, 0) scale(.5);
   transform-origin: center center;
-  z-index: -1;
+  z-index: 1;
   opacity:1;
   transition: 5s;
 }
@@ -59,10 +58,12 @@
   transform: translate3d(-5%, 0, 0);
   background-image: linear-gradient(to right, #F54537 0%, #F54537 44%, #FFC113 44%, #FFC113 56%, #F54537 56%, #F54537 100%);
   transition: 1s;
+  cursor: pointer;
 }
 .gift-top.boxOpen{
   animation: box-open 1s;
   opacity:0;
+  cursor: default;
 }
 @keyframes box-open{
   0%{
@@ -99,10 +100,12 @@
   background-image: linear-gradient(to right, #D43130 0%, #D43130 45%, #FF900A 45%, #FF900A 55%, #D43130 55%, #D43130 100%);
   border-radius: 0 0 5px 5px;
   transition: 1s;
+  cursor: pointer;
 }
 .gift-box.boxDown{
-  animation: box-down 1s; 
-  opacity:0; 
+  animation: box-down 1s;
+  opacity:0;
+  cursor: default;
 }
 @keyframes box-down{
   0%{
@@ -112,5 +115,5 @@
   100%{
     top:50px;
     opacity:0;
-  }  
+  }
 }
