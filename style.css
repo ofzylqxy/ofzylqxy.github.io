@@ -2,13 +2,13 @@ html {
     font-size: 16px
 }
 
-[v-cloak]{
+[v-cloak] {
     display: none;
 }
 
 
 body {
-    background-color: #F0E2DB;
+    background-color: #FADBDD;
     font-family: "Helvetica Neue", "Segoe UI", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;;
     transition: 1s;
     user-select: none;
@@ -18,73 +18,92 @@ body {
 body.open {
     animation: bg-change 1s 1;
     -webkit-animation: bg-change 1s 1;
-    background-color: #FADBDD;
+    background-color: #000000;
     transition: 1s;
 }
 
 @keyframes bg-change {
     0% {
-        background-color: #F0E2DB;
+        background-color: #FADBDD;
     }
     100% {
-        background-color: #FADBDD;
+        background-color: #000000;
     }
 }
 
 @-webkit-keyframes bg-change {
     0% {
-        background-color: #F0E2DB;
-    }
-    100% {
         background-color: #FADBDD;
     }
+    100% {
+        background-color: #000000;
+    }
 }
 
-
-.target-date {
-    font-size: 3rem;
-    margin: 1rem;
-    /*color: #c3c3c3;*/
-    font-style: italic;
-    text-align: center;
-    font-weight: 400;
-}
 .tips {
     text-align: center;
     position: fixed;
     transform: translate(-50%, -50%);
     top: 75%;
     left: 50%;
-    color: black;
+    z-index: 2;
     width: 100%;
 }
 
-.tips.tipsHide {
-    animation: tips-hide 1s;
-    opacity:0;
+
+.target-date {
+    font-size: 3rem;
+    margin: 1rem;
+    color: black;
+    font-style: italic;
+    text-align: center;
+    font-weight: 400;
 }
 
-@keyframes tips-hide{
-    0%{
-        opacity:1;
+.target-date.dateColorChange {
+    animation: date-color-change 1s 1;
+    -webkit-animation: date-color-change 1s 1;
+    color: white;
+}
+
+@keyframes date-color-change {
+    0% {
+        color: black;
     }
-    100%{
-        opacity:0;
+    100% {
+        color: white;
     }
 }
+
+@-webkit-keyframes date-color-change {
+    0% {
+        color: black;
+    }
+    100% {
+        color: white;
+    }
+}
+
+.tips-text {
+    font-weight: 300;
+    font-size: 2rem;
+    color: black;
+}
+
 
 .typed-text {
     margin: 10px 50px;
     letter-spacing: 1rem;
     font-weight: 300;
-    color: black;
+    color: #D2D2D4;
     font-style: italic;
     position: fixed;
     font-size: 1.5rem;
+    z-index: 4;
 }
 
 
-#canvas {
+canvas {
     position: fixed;
     display: block;
 }

@@ -63,7 +63,7 @@ var aText = [
 
     "我爱你",
 
-    "----Cynyard"
+    "-Cynyard"
 ];
 
 
@@ -108,11 +108,12 @@ var app = new Vue({
     },
     methods: {
         click: function () {
-            if (!this.open) {
+            if (!this.open && new Date() > new Date(this.targetDayText)) {
                 this.open = true;
                 this.changeText();
                 let audio = new Audio();
-                audio.src = "./music.mp3";
+                audio.src = "https://static-ufgdsy.oss-cn-beijing.aliyuncs.com/oftcsll/riverflowsinyou.mp3";
+                audio.loop = true;
                 audio.play();
             }
         },

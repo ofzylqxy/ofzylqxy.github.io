@@ -14,13 +14,13 @@
     <div id="app">
         <div id="gift-id" class="gift" :class="{dukdik: !open}">
             <div class="gift-top" :class="{boxOpen: open}" @click="click"></div>
-            <span id="cheer-text" @click="textClick" class="gift-text" v-show="open">{{text}}</span>
+            <span id="cheer-text" v-cloak @click="textClick" class="gift-text" v-show="open">{{text}}</span>
             <div class="gift-box" :class="{boxDown: open}" @click="click"></div>
         </div>
         <div class="tips" v-cloak>
-            <span style="font-weight: 300;font-size: 2rem;">距离</span>
-            <p class="target-date">{{targetDayText}}</p>
-            <span style="font-weight: 300;font-size: 2rem;">已经过去了{{days}}{{hours}}{{minutes}}{{seconds}}</span>
+            <span class="tips-text">距离</span>
+            <p class="target-date" :class="{dateColorChange:open}">{{targetDayText}}</p>
+            <span class="tips-text">已经过去了{{days}}{{hours}}{{minutes}}{{seconds}}</span>
         </div>
         <div class="typed-text" v-show="open" v-html="curText"></div>
         <div class="wrapper" v-show="open">
@@ -176,10 +176,15 @@
             <div class="confetti-0"></div>
         </div>
         <canvas id="canvas" v-show="open">Canvas is not supported in your browser.</canvas>
+        <canvas id="main-fireworks" v-show="open">Canvas is not supported in your browser.</canvas>
     </div>
-    <script src='./vue.min.js'></script>
-    <script src="./script.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.22/vue.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <script src="script.js"></script>
     <script src="fireworks.js"></script>
+    <script src="mouseclick.js"></script>
+    <script src="mainfireworks.js"></script>
+
 </body>
 
 </html>
