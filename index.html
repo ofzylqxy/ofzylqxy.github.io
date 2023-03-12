@@ -18,12 +18,12 @@
             <div class="gift-box" :class="{boxDown: open}" @click="click"></div>
         </div>
         <div class="tips" v-cloak>
-            <span class="tips-text">距离</span>
-            <p class="target-date" :class="{dateColorChange:open}">{{targetDayText}}</p>
-            <span class="tips-text">已经过去了{{days}}{{hours}}{{minutes}}{{seconds}}</span>
+            <span class="tips-text" :class="{tipsTextHide:open}" >距离</span>
+            <p class="target-date" :class="{dateColorChange:open}">{{anniversaryDayText}}</p>
+            <span class="tips-text" :class="{tipsTextHide:open}">已经过去了{{days}}{{hours}}{{minutes}}{{seconds}}</span>
         </div>
-        <div class="typed-text" v-show="open" v-html="curText"></div>
-        <div class="wrapper" v-show="open">
+        <div class="typed-text" v-cloak v-show="open" v-html="curText"></div>
+        <div class="wrapper" v-cloak v-show="open">
             <div class="confetti-149"></div>
             <div class="confetti-148"></div>
             <div class="confetti-147"></div>
@@ -175,8 +175,8 @@
             <div class="confetti-1"></div>
             <div class="confetti-0"></div>
         </div>
-        <canvas id="canvas" v-show="open">Canvas is not supported in your browser.</canvas>
-        <canvas id="main-fireworks" v-show="open">Canvas is not supported in your browser.</canvas>
+        <canvas id="canvas" v-cloak v-show="open">Canvas is not supported in your browser.</canvas>
+        <canvas id="main-fireworks" v-cloak v-show="open">Canvas is not supported in your browser.</canvas>
     </div>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.22/vue.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>

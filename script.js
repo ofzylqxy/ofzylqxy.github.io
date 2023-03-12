@@ -67,8 +67,8 @@ var aText = [
 ];
 
 
-// var targetDay = "13 Mar 2022 23:08:00";
-var targetDay = "13 Mar 2022";
+// var anniversaryDay = "13 Mar 2022 23:08:00";
+var anniversaryDay = "13 Mar 2022";
 
 
 var app = new Vue({
@@ -86,7 +86,7 @@ var app = new Vue({
             'Cynyard & Lily'
         ],
         textIndex: 0,
-        targetDayText: targetDay,
+        anniversaryDayText: anniversaryDay,
         textTyper: {
             iSpeed: 100, // 每个字打印的速度，单位毫秒
             iIndex: 0, // 开始打印的行index
@@ -108,13 +108,17 @@ var app = new Vue({
     },
     methods: {
         click: function () {
-            if (!this.open && new Date() > new Date(this.targetDayText)) {
-                this.open = true;
-                this.changeText();
-                let audio = new Audio();
-                audio.src = "https://static-ufgdsy.oss-cn-beijing.aliyuncs.com/oftcsll/riverflowsinyou.mp3";
-                audio.loop = true;
-                audio.play();
+            if (!this.open) {
+                let targetDay = new Date(this.anniversaryDay);
+                targetDay.setFullYear(targetDay.getFullYear() + 1);
+                if (new Date() > targetDay || window.location.href.indexOf("localhost") > 0) {
+                    this.open = true;
+                    this.changeText();
+                    let audio = new Audio();
+                    audio.src = "https://static-ufgdsy.oss-cn-beijing.aliyuncs.com/oftcsll/riverflowsinyou.mp3";
+                    audio.loop = true;
+                    audio.play();
+                }
             }
         },
 
@@ -152,7 +156,7 @@ var app = new Vue({
         },
 
         countdown: function () {
-            const targetDate = new Date(this.targetDayText);
+            const targetDate = new Date(this.anniversaryDayText);
             const currentDate = new Date();
 
             const totalSeconds = (currentDate - targetDate) / 1000;

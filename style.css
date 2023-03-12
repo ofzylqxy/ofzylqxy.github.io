@@ -90,6 +90,29 @@ body.open {
     color: black;
 }
 
+.tips-text.tipsTextHide {
+    animation: tips-text-hide 1s 1;
+    -webkit-animation: tips-text-hide 1s 1;
+    opacity: 0
+}
+
+@keyframes tips-text-hide {
+    0% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0
+    }
+}
+
+@-webkit-keyframes tips-text-hide {
+    0% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0
+    }
+}
 
 .typed-text {
     margin: 10px 50px;
