@@ -109,16 +109,12 @@ var app = new Vue({
     methods: {
         click: function () {
             if (!this.open) {
-                let targetDay = new Date(this.anniversaryDay);
-                targetDay.setFullYear(targetDay.getFullYear() + 1);
-                if (new Date() > targetDay || window.location.href.indexOf("localhost") > 0) {
-                    this.open = true;
-                    this.changeText();
-                    let audio = new Audio();
-                    audio.src = "https://static-ufgdsy.oss-cn-beijing.aliyuncs.com/oftcsll/riverflowsinyou.mp3";
-                    audio.loop = true;
-                    audio.play();
-                }
+                this.open = true;
+                this.changeText();
+                let audio = new Audio();
+                audio.src = "https://static-ufgdsy.oss-cn-beijing.aliyuncs.com/oftcsll/riverflowsinyou.mp3";
+                audio.loop = true;
+                audio.play();
             }
         },
 
