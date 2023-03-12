@@ -66,8 +66,9 @@ var aText = [
     "-Cynyard"
 ];
 
-
-// var anniversaryDay = "13 Mar 2022 23:08:00";
+// 这个日期之后才能打开
+var targetDay = "13 Mar 2023 00:00:00";
+// 纪念日
 var anniversaryDay = "13 Mar 2022";
 
 
@@ -108,7 +109,7 @@ var app = new Vue({
     },
     methods: {
         click: function () {
-            if (!this.open) {
+            if (!this.open && (new Date() - new Date(targetDay) > 0)) {
                 this.open = true;
                 this.changeText();
                 let audio = new Audio();
