@@ -113,7 +113,8 @@ var app = new Vue({
                 this.open = true;
                 this.changeText();
                 let audio = new Audio();
-                audio.src = "https://static-ufgdsy.oss-cn-beijing.aliyuncs.com/oftcsll/riverflowsinyou.mp3";
+                // audio.src = "https://static-ufgdsy.oss-cn-beijing.aliyuncs.com/oftcsll/riverflowsinyou.mp3";
+                audio.src = "https://static-ufgdsy.oss-cn-beijing.aliyuncs.com/oftcsll/xiaoyu.mp3";
                 audio.loop = true;
                 audio.play();
             }
