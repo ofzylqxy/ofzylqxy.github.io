@@ -7,7 +7,22 @@ a {
 }
 
 .et-hero-tabs{
-    background: #FADBDD;
+    /*background: #FADBDD;*/
+    background-image: url("home.jpeg");
+    background-position: 10% 80%;
+    background-size:cover
+}
+
+#tab-1{
+    background-image: url("2022.jpeg");
+    background-position:center;
+    background-size:cover
+}
+
+#tab-2{
+    background-image: url("2023.jpeg");
+    background-position:right center;
+    background-size:cover
 }
 
 .et-hero-tabs,
