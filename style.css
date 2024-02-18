@@ -1,132 +1,91 @@
-html {
-    font-size: 16px
-}
-
-[v-cloak] {
-    display: none;
-}
-
-
 body {
-    background-color: #FADBDD;
-    font-family: "Helvetica Neue", "Segoe UI", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;;
-    transition: 1s;
-    user-select: none;
-    -webkit-user-select: none;
+    font-family: "Century Gothic", "Lato", sans-serif;
 }
 
-body.open {
-    animation: bg-change 1s 1;
-    -webkit-animation: bg-change 1s 1;
-    background-color: #000000;
-    transition: 1s;
+a {
+    text-decoration: none;
 }
 
-@keyframes bg-change {
-    0% {
-        background-color: #FADBDD;
-    }
-    100% {
-        background-color: #000000;
-    }
+.et-hero-tabs{
+    background: #FADBDD;
 }
 
-@-webkit-keyframes bg-change {
-    0% {
-        background-color: #FADBDD;
-    }
-    100% {
-        background-color: #000000;
-    }
-}
-
-.tips {
+.et-hero-tabs,
+.et-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
     text-align: center;
-    position: fixed;
-    transform: translate(-50%, -50%);
-    top: 75%;
-    left: 50%;
-    z-index: 2;
-    width: 100%;
+    padding: 0 2em;
 }
-
-
-.target-date {
-    font-size: 3rem;
-    margin: 1rem;
-    color: black;
-    font-style: italic;
-    text-align: center;
-    font-weight: 400;
-}
-
-.target-date.dateColorChange {
-    animation: date-color-change 1s 1;
-    -webkit-animation: date-color-change 1s 1;
-    color: white;
-}
-
-@keyframes date-color-change {
-    0% {
-        color: black;
-    }
-    100% {
-        color: white;
-    }
-}
-
-@-webkit-keyframes date-color-change {
-    0% {
-        color: black;
-    }
-    100% {
-        color: white;
-    }
-}
-
-.tips-text {
-    font-weight: 300;
+.et-hero-tabs h1,
+.et-slide h1 {
     font-size: 2rem;
-    color: black;
-}
-
-.tips-text.tipsTextHide {
-    animation: tips-text-hide 1s 1;
-    -webkit-animation: tips-text-hide 1s 1;
-    opacity: 0
-}
-
-@keyframes tips-text-hide {
-    0% {
-        opacity: 100%;
-    }
-    100% {
-        opacity: 0
-    }
-}
-
-@-webkit-keyframes tips-text-hide {
-    0% {
-        opacity: 100%;
-    }
-    100% {
-        opacity: 0
-    }
-}
-
-.typed-text {
-    margin: 10px 50px;
+    margin: 0;
     letter-spacing: 1rem;
-    font-weight: 300;
-    color: #D2D2D4;
-    font-style: italic;
-    position: fixed;
-    font-size: 1.5rem;
-    z-index: 4;
+}
+.et-hero-tabs h3,
+.et-slide h3 {
+    font-size: 1rem;
+    letter-spacing: 0.3rem;
+    opacity: 0.6;
 }
 
-
-canvas {
+.et-hero-tabs-container {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    z-index: 10;
+}
+.et-hero-tabs-container--top {
     position: fixed;
-    display: block;
+    top: 0;
+}
+
+.et-hero-tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    color: #000;
+    letter-spacing: 0.1rem;
+    transition: all 0.5s ease;
+    font-size: 0.8rem;
+}
+.et-hero-tab:hover {
+    color: white;
+    background: rgba(102, 177, 241, 0.8);
+    transition: all 0.5s ease;
+}
+
+.et-hero-tab-slider {
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 6px;
+    background: #66B1F1;
+    transition: left 0.3s ease;
+}
+
+@media (min-width: 800px) {
+    .et-hero-tabs h1,
+    .et-slide h1 {
+        font-size: 3rem;
+    }
+    .et-hero-tabs h3,
+    .et-slide h3 {
+        font-size: 1rem;
+    }
+
+    .et-hero-tab {
+        font-size: 1rem;
+    }
 }
