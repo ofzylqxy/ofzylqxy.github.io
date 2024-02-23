@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title>For Lily</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="favicon" href="../favicon.ico">
+</head>
+<body>
+    <section class="et-hero-tabs">
+        <h1>Cynyard & Lily</h1>
+<!--        <h3>Sliding content with sticky tab nav</h3>-->
+        <div class="et-hero-tabs-container">
+            <a class="et-hero-tab" href="#tab-1">2022-2023</a>
+            <a class="et-hero-tab" href="#tab-2">2023-2024</a>
+            <span class="et-hero-tab-slider"></span>
+        </div>
+    </section>
+
+    <!-- Main -->
+    <main class="et-main">
+        <section class="et-slide" id="tab-1" onclick="window.location.href='/2023'">
+            <h1>2022-2023</h1>
+<!--            <h3>something about 第一年</h3>-->
+        </section>
+        <section class="et-slide" id="tab-2" onclick="window.location.href='/2024'">
+            <h1>2023-2024</h1>
+<!--            <h3>something about 第二年</h3>-->
+        </section>
+    </main>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <script src="../common.js"></script>
+    <script src="../check.js"></script>
+    <script  src="script.js"></script>
+</body>
+</html>

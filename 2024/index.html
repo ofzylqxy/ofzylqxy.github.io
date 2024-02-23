@@ -3,10 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <title>For Lily</title>
+    <link rel="favicon" href="../favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Kalam:700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 </head>
 <body>
 
-    <h1>TODO</h1>
+    <div id="explosive">
+        <button type="button" class="custom-btn btn-6">Click</button>
+    </div>
+
+    <div id="emoji">
+        <canvas id="text" width="700" height="200"></canvas>
+        <div id="html-text" class="text" style="display: none">
+            Happy Anniversary!
+        </div>
+    </div>
+
+
+    <!-- partial -->
+    <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/pixi.min.js'></script>
+    <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/requestAnimationFrame.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js'></script>
+    <script src="../common.js"></script>
+    <script src="../check.js"></script>
+    <script src="emoji.js"></script>
+    <script src="button.js"></script>
 
 </body>
 </html>

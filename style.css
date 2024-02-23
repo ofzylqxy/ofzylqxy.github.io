@@ -1,106 +1,61 @@
-body {
-    font-family: "Century Gothic", "Lato", sans-serif;
-}
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
-a {
-    text-decoration: none;
+.login-page {
+    width: 360px;
+    padding: 200px 0 0;
+    margin: auto;
 }
-
-.et-hero-tabs{
-    /*background: #FADBDD;*/
-    background-image: url("home.jpeg");
-    background-position: 10% 80%;
-    background-size:cover
-}
-
-#tab-1{
-    background-image: url("2022.jpeg");
-    background-position:center;
-    background-size:cover
-}
-
-#tab-2{
-    background-image: url("2023.jpeg");
-    background-position:right center;
-    background-size:cover
-}
-
-.et-hero-tabs,
-.et-slide {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    position: relative;
+.form {
+    z-index: 1;
+    background: #FFFFFF;
+    max-width: 360px;
+    padding: 45px;
     text-align: center;
-    padding: 0 2em;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
-.et-hero-tabs h1,
-.et-slide h1 {
-    font-size: 2rem;
-    margin: 0;
-    letter-spacing: 1rem;
-}
-.et-hero-tabs h3,
-.et-slide h3 {
-    font-size: 1rem;
-    letter-spacing: 0.3rem;
-    opacity: 0.6;
-}
-
-.et-hero-tabs-container {
-    display: flex;
-    flex-direction: row;
-    position: absolute;
-    bottom: 0;
+.form input {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
     width: 100%;
-    height: 70px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    background: #fff;
-    z-index: 10;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
 }
-.et-hero-tabs-container--top {
-    position: fixed;
-    top: 0;
+.form button {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: #363636;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    cursor: pointer;
+}
+.form button:hover,.form button:active,.form button:focus {
+    background: #4F4F4F;
+}
+.form .message {
+    margin: 15px 0 0;
+    color: #b3b3b3;
+    font-size: 12px;
+    user-select: none;
+    -webkit-user-select: none;
+}
+.form .message span {
+    color: #4F4F4F;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
 }
 
-.et-hero-tab {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-    color: #000;
-    letter-spacing: 0.1rem;
-    transition: all 0.5s ease;
-    font-size: 0.8rem;
-}
-.et-hero-tab:hover {
-    color: white;
-    background: rgba(102, 177, 241, 0.8);
-    transition: all 0.5s ease;
-}
-
-.et-hero-tab-slider {
-    position: absolute;
-    bottom: 0;
-    width: 0;
-    height: 6px;
-    background: #66B1F1;
-    transition: left 0.3s ease;
-}
-
-@media (min-width: 800px) {
-    .et-hero-tabs h1,
-    .et-slide h1 {
-        font-size: 3rem;
-    }
-    .et-hero-tabs h3,
-    .et-slide h3 {
-        font-size: 1rem;
-    }
-
-    .et-hero-tab {
-        font-size: 1rem;
-    }
+body {
+    background-size:100% 100%;
+    -webkit-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
 }
