@@ -4,8 +4,9 @@
     margin: 0;
     padding: 0;
 }
+
 :root {
-    font-size: calc(16px + (48 - 16)*(100vw - 320px)/(2560 - 320));
+    font-size: calc(16px + (48 - 16) * (100vw - 320px) / (2560 - 320));
 }
 
 body {
@@ -15,7 +16,6 @@ body {
     /*overflow: hidden;*/
     font-family: "Kalam", Arial;
 }
-
 
 
 canvas {
@@ -38,7 +38,7 @@ canvas {
 }
 
 
-#explosive{
+#explosive {
     position: absolute;
     z-index: 100;
     top: 45%;
@@ -48,32 +48,40 @@ canvas {
 }
 
 
-
 button {
-    background:#c797eb;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+    background: #c797eb;
     border-radius: 0.2em;
     color: #fff;
     cursor: pointer;
-    margin: auto;
     padding: 0.5em 1em;
+    font-family: "Kalam", Arial;
     transition: background .15s linear, color .15s linear;
 }
+
 button:focus, button:hover {
     background: #AA8ADA;
 }
+
 button:focus {
     outline: transparent;
 }
+
 button::-moz-focus-inner {
     border: 0;
 }
+
 button:active {
     transform: translateY(0.1em);
 }
+
 .exploding, .exploding:focus, .exploding:hover {
     background: transparent;
     color: transparent;
 }
+
 .exploding {
     pointer-events: none;
     position: relative;
@@ -83,14 +91,17 @@ button:active {
     -ms-user-select: none;
     user-select: none;
 }
+
 .particle {
     position: absolute;
     top: 0;
     left: 0;
 }
+
 .particle--debris {
     background: #c797eb;
 }
+
 .particle--fire {
     border-radius: 50%;
 }

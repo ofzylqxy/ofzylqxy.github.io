@@ -4,6 +4,8 @@ Anniversary Gift for Lily
 
 SPECIAL THANKS TO: 
 
+- https://codepen.io/jkantner/pen/oNjjEaJ
+- https://codepen.io/rachsmith/pen/BKjvqK
 - https://codepen.io/colorlib/pen/rxddKy
 - https://codepen.io/fionnachan/pen/EvaqOB
 - https://codepen.io/F9Uf/pen/WLYyKP
