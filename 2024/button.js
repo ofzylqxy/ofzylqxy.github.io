@@ -42,7 +42,9 @@ class ExplosiveButton {
 			setTimeout(() => {
 				this.element.style.display = "none";
 				startRender();
+				showQrCode();
 			}, duration);
+
 		}
 
 	}

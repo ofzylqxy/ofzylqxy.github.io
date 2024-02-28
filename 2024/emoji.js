@@ -20,7 +20,12 @@ function startRender() {
         },
         active: begin
     });
+}
 
+function showQrCode(){
+    var qrDiv = document.getElementById("qr");
+    qrDiv.classList.add('fade-in');
+    qrDiv.style.opacity = 0.8;
 }
 
 // canvas

@@ -37,6 +37,28 @@ canvas {
     color: #AA8ADA;
 }
 
+#qr {
+    position: absolute;
+    z-index: 99;
+    top: 20%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.8
+    }
+}
+
+.fade-in {
+    animation: fade-in 10s ease-in-out backwards;
+}
 
 #explosive {
     position: absolute;
